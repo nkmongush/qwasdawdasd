@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Тест</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Заголовок сайта -->
+  <header id="header" class="auth-page">
+    <div class="flex-logoname">
+      <img src="./images/logo.png" alt="Logo" class="header-logoimg">
+      <div class="logo">World of Tanks</div>
+    </div>
+    <nav>
+      <ul>
+        <li><button id="btnback" class="btn4">Описание</button></li>
+        <li><button id="btndict" class="btn4">Словарь</button></li>
+        <li><button id="btngallery" class="btn4">Галерея</button></li>
+        <li><button id="testingButton">Тест</button></li>
+        <li><button id="btnresults" class="btn4">Личный кабинет</button></li>
+      </ul>
+    </nav>
+    <div class="user-info" id="user-info">
+      <span id="welcome-message">
+        <p id="resultName"></p>
+      </span>
+      <button id="logout-btn">Выйти</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrapper">
+      <div class="carousel">
+        <div class="def">
+          <form name="formOne" id='formSlide1' novalidate>
+            <img src="./images/logo.png" class="img-authoriz">
+            <h1 style="margin-left: 120px;">World of Tanks</h1>
+            <fieldset class="field">
+              <legend>Логин</legend>
+              <input
+                title="Логин должен состоять из символов русского алфавита и цифр, иметь количество символов от 4 до 10"
+                class="check" type="text" name="login" id="login" pattern="^[А-Яа-я0-9]+$" minlength="4" maxlength="10"
+                required>
+              <label for="login"></label>
+              <div class="error" id="loginError"></div>
+            </fieldset>
+            <br>
+            <fieldset class="field">
+              <legend>Дата рождения</legend>
+              <input title="Дата рождения может быть не раньше 1950 года и не позже дня создания формы" class="check"
+                type="date" name="birth" id="birth" min="1904-01-01" max="2024-12-12" required>
+              <label for="birth"></label>
+            </fieldset>
+            <br>
+            <fieldset class="field">
+              <legend>Пол</legend>
+              <div class="fl">
+                <input type="radio" name="sex" checked="checked" value="Мужской" id="male">
+                <label for="male">Женский</label>
+                <input type="radio" name="sex" value="Женский" id="female">
+                <label for="female" class="right">Мужской</label>
+              </div>
+            </fieldset>
+            <br>
+            <button id="btn1" class="btn4">далее</button>
+
+          </form>
+        </div>
+
+        <div class="def">
+          <form name="formTwo" id="formSlide2" novalidate>
+            <!-- Заголовок сайта -->
+            <h3>Добро пожаловать в World of Tanks, боец!</h3>
+
+            <p>World of Tanks — это массовая многопользовательская онлайн-игра, посвящённая бронированным машинам
+              середины XX века. Сражайтесь плечом к плечу с поклонниками стальных гигантов со всех уголков планеты и
+              одерживайте блестящие победы!</p>
+
+            <h4>Что вас ждет в World of Tanks?</h4>
+
+            <ul>
+              <li><strong>Типы техники:</strong> Тип и характеристики выбранной техники определяют тактику ведения боя.
+                Кроме того, от особенностей машины зависит выбор дополнительного оборудования и снаряжения, а также
+                навыков и умений для развития экипажа. Все эти факторы влияют на исход боя: если машина отыгрывает своё
+                предназначение в бою, то вероятность победы существенно возрастает.</li>
+              <li><strong>Управление и стрельба:</strong> Используйте клавиши W, A, S, D для управления машиной в ручном
+                режиме, управляйте орудием при помощи мыши. Двигайте мышью влево или вправо, чтобы развернуть орудие в
+                горизонтальном направлении. Движение мышью вперёд или назад направит орудие вверх или вниз. Чтобы
+                выстрелить, щёлкните левой кнопкой мыши.</li>
+              <li><strong>Игровая экономика:</strong> Кредиты — это основная игровая валюта в World of Tanks. Кредиты
+                зарабатываются в сражениях и начисляются за активные боевые действия. Победные бои приносят наибольший
+                доход. Кредиты можно потратить на покупку модулей, оборудования и техники, ремонт машины, пополнение
+                боекомплекта и снаряжения, учебные пособия и предбоевые инструкции для экипажа. Опыт — это важный
+                игровой ресурс, который зарабатывается в сражениях и начисляется за активные боевые действия. За боевой
+                опыт машины можно изучать новые модули этой машины и технику следующих уровней. В игре существует также
+                свободный опыт, который можно потратить на изучение любых модулей и техники.</li>
+              <li><strong>Общение в игре:</strong> Используйте боевой чат для координации действий с союзниками. Он
+                отображается над панелью состояния техники. Enter — aктивация боевого чата. Теперь вы можете написать
+                сообщение. Нажмите Enter ещё раз, чтобы отправить сообщение в чат всей команде. Если вы играете взводом
+                и хотите обмениваться сообщениями только с игроками в вашем формировании, переключитесь на взводный
+                боевой чат. Сообщения, написанные в этом чате, выделяются жёлтым цветом и видны только вашему взводу.
+                Tab — переключение между командным и взводным режимами боевого чата.</li>
+
+              <p>Управляйте машинами времён Второй мировой войны и середины XX века, соревнуясь с другими игроками по
+                всему миру.</p>
+
+              <h4><a href="https://worldoftanks.eu/ru/" target="_blank"
+                  style="color: #ff0000; text-decoration: none;">Начните играть в <strong>World of Tanks </strong> прямо
+                  сейчас боец</a></h4>
+
+
+
+              <p id="resultName"></p>
+          </form>
+        </div>
+
+
+        <div class="def">
+          <form name="formThree" id='formSlide3' novalidate>
+            <h2>Вопросы по World of Tanks:</h2>
+            <div>
+              <label for="question1">Первый премиум танк в игре была Matilda II?</label>
+              <textarea id="question1" placeholder="Ваш ответ" required></textarea>
+            </div>
+            <div>
+              <label for="question2">Какой калибр самого мощного орудия на КВ-2?</label>
+              <textarea id="question2" placeholder="Ваш ответ" required></textarea>
+            </div>
+            <div>
+              <label for="question3">Калибр FV215b?</label>
+              <div>
+                <input type="radio" id="question3-option2" name="question3" value="100">
+                <label for="question3">100</label>
+              </div>
+              <div>
+                <input type="radio" id="question3-option3" name="question3" value="183">
+                <label for="question3">183</label>
+              </div>
+              <div>
+                <input type="radio" id="question3-option4" name="question3" value="300">
+                <label for="question3">300</label>
+              </div>
+            </div>
+            <div>
+              <label for="question4">Как называют Rhm.- Borsig-Waffentrager (Rhm.-B. WT)?</label>
+              <div>
+                <input type="radio" id="question4-option1" name="question4" value="Буратино" required>
+                <label for="question4-option1">Буратино</label>
+              </div>
+              <div>
+                <input type="radio" id="question4-option2" name="question4" value="Тапок">
+                <label for="question4-option2">Тапок</label>
+              </div>
+              <div>
+                <input type="radio" id="question4-option3" name="question4" value="Борщ">
+                <label for="question4-option3">Борщ</label>
+              </div>
+            </div>
+            <div>
+              <label for="question5">Какие особенности у ИС-3?:</label>
+              <div>
+                <input type="radio" id="question5-option1" name="question5" value="Самая мощная пушка на 8 уровне"
+                  required>
+                <label for="question5-option1">Самая мощная пушка на 8 уровне</label>
+              </div>
+              <div>
+                <input type="radio" id="question5-option2" name="question5"
+                  value="Лоб по форме «щучки» и рикошетная башня">
+                <label for="question5-option2">Лоб по форме «щучки» и рикошетная башня</label>
+              </div>
+              <div>
+                <input type="radio" id="question5-option3" name="question5"
+                  value="Углы вертикальной наводки (пушка может опускаться вниз )">
+                <label for="question5-option3">Углы вертикальной наводки (пушка может опускаться вниз )</label>
+              </div>
+            </div>
+            <div>
+              <label for="question6">Как прозвали ИС-7?</label>
+              <div>
+                <input type="radio" id="question6-option1" name="question6" value="Валенок" required>
+                <label for="question6-option1">Валенок</label>
+              </div>
+              <div>
+                <input type="radio" id="question6-option2" name="question6" value="Ветеран">
+                <label for="question6-option2">Ветеран</label>
+              </div>
+              <div>
+                <input type="radio" id="question6-option3" name="question6" value="Дедушка">
+                <label for="question6-option3">Дедушка</label>
+              </div>
+              <div>
+
+                <br>
+                <br>
+                <div id="totalScore"></div>
+
+              </div>
+              <button id="btn2" class="btn2">Вернуться обратно</button>
+              <button id="btn3" class="btn3">Показать результаты</button>
+              <button id="Again" class="btn3">Еще раз</button>
+          </form>
+
+
+
+
+
+        </div>
+      </div>
+      <div class="def">
+        <form name="formFour id=formSlide4">
+          <div class="result-container">
+            <br>
+            Ваше имя:<div class="result-name" id="resultName2" style="font-size: 20px;"></div>
+            Ваш пол:<div class="result-gender" id="resultGender" style="font-size: 20px;"></div>
+            Ваша дата рождения:<div class="result-info" id="resultInfo" style="font-size: 20px;"></div>
+            <br>
+            Результаты последнего теста:
+            <div class="questionResult1" id="questionResult1"></div>
+            <div class="questionResult2" id="questionResult2"></div>
+            <div class="questionResult3" id="questionResult3"></div>
+
+            <br>
+            <div class="questionResult4" id="questionResult4"></div>
+
+            <br>
+            <div class="questionResult5" id="questionResult5"></div>
+
+            <br>
+            <div class="questionResult6" id="questionResult6"></div>
+
+
+            <button id="logout" class="btn2">Выйти</button>
+
+
+        </form>
+      </div>
+    </div>
+
+    <div class="def">
+      <form name="formFive" id="formSlide5" novalidate>
+        <h2>Словарь терминов</h2>
+
+
+        <!-- Поле для поиска -->
+        <input type="text" id="searchInput" oninput="searchTerm()" placeholder="Поиск термина...">
+
+        <div id="termList">
+          <div class="term" onclick="showDescription('Танк')">Танк</div>
+          <div class="term" onclick="showDescription('Экипаж')">Экипаж</div>
+          <div class="term" onclick="showDescription('Модули')">Модули</div>
+          <div class="term" onclick="showDescription('Карта')">Карта</div>
+          <div class="term" onclick="showDescription('Классы танков')">Классы танков</div>
+          <div class="term" onclick="showDescription('Опыт')">Опыт</div>
+          <div class="term" onclick="showDescription('Золото')">Золото</div>
+          <div class="term" onclick="showDescription('Командный бой')">Командый бой</div>
+          <div class="term" onclick="showDescription('Амуниция')">Амуниция</div>
+          <div class="term" onclick="showDescription('Миссии и достижения')">Миссии и достижения</div>
+        </div>
+
+        <!-- Поле для отображения описания выбранного термина -->
+        <div id="descriptionField">
+          <h3>Описание:</h3>
+          <p id="descriptionText">Выберите термин для отображения описания.</p>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="def">
+      <form name="formSix" id="formSlide6" novalidate>
+        <div class="slider-container">
+          <!-- Контейнер слайдера -->
+          <div class="slider">
+            <!-- Слайды -->
+            <div class="slide" id="slide1">
+              <img src="./images/1.jpeg" alt="Grineer">
+              <p class="caption">Фото танка</p>
+            </div>
+            <div class="slide" id="slide2">
+              <img src="./images/2.jpg" alt="Corpus">
+              <p class="caption">Танк Друкула</p>
+            </div>
+            <div class="slide" id="slide3">
+              <img src="./images/3.jpg" alt="Infested">
+              <p class="caption">Несколько танков</p>
+            </div>
+            <div class="slide" id="slide4">
+              <img src="./images/4.jpg" alt="Sentients">
+              <p class="caption">Логотип</p>
+            </div>
+            <div class="slide" id="slide5">
+              <img src="./images/5.jpg" alt="Tenno">
+              <p class="caption">Город в огне</p>
+            </div>
+          </div>
+          <!-- Кнопки слайдера -->
+          <button type="button" id="prevSlide" class="slider-button">
+            << /button>
+              <button type="button" id="nextSlide" class="slider-button">></button>
+              <!-- Информация о текущем слайде -->
+              <div id="slideInfo" class="slide-info">1 слайд из 5</div>
+        </div>
+      </form>
+    </div>
+
+
+
+    </div>
+    </div>
+  </main>
+  <footer id="footer">
+    <div class="footer-content">
+      <div class="footer-buttons">
+        <p id="welcome-message-footer"></p>
+      </div>
+      <div class="fl3">
+        <p>Контакты: <a href="#">+7(900)987-65-43</a></p>
+        <p>Соцсети: </p>
+        <a href="#"><img src="./images/vk.png" style="width: 50px; height: 50px;"></a>
+        <a href="#"><img src="./images/telegram.png" style="width: 50px; height: 50px;"></a>
+      </div>
+      <p>&copy; 2024 World of Tanks</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
